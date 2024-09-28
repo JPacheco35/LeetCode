@@ -10,8 +10,7 @@ class Solution:
         def traverse(node):
             if not node:
                 return []
-            # Post-order: root -> right -> left
+            # Post-order: left -> right -> node
             return traverse(node.left) + traverse(node.right) + [node.val]
     
         return traverse(root)
-        
