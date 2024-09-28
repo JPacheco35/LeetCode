@@ -15,8 +15,8 @@ class Solution:
         if length == 1:
             return True
         
-        if length == 2:
-            return num[0] == num[1]
+#         if length == 2:
+#             return num[0] == num[1]
         
         # if length == 3:
         #     return num[0] == num[2]
