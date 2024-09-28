@@ -7,7 +7,10 @@ class Solution:
         if s == "":
             return True;
         
+        # remove all non-alphanumeric characters
         s = re.sub(r'[^a-zA-Z0-9]', '', s)
+        
+        # convert all letters to lowercase
         s = s.lower()
         
         
