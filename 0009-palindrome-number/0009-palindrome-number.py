@@ -12,8 +12,8 @@ class Solution:
         length = len(num)
         
         # Case: single digit --> TRUE
-        if length == 1:
-            return True
+        # if length == 1:
+        #     return True
         
 #         if length == 2:
 #             return num[0] == num[1]
