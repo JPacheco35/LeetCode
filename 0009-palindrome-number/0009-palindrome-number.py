@@ -26,14 +26,8 @@ class Solution:
         # if length == 5:
         #     return (num[0] == num[4]) and (num[1] == num[3])
         
-        if length % 2 == 0:
-            for i in range(int(length/2)):
-                if num[i] != num[length - (i+1)]:
-                    return False
-                
-        else:
-            for i in range(math.floor(length/2)):
-                if num[i] != num[length - (i+1)]:
-                    return False
+        for i in range(math.floor(length/2)):
+            if num[i] != num[length - (i+1)]:
+                return False
         
         return True
