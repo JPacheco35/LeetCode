@@ -1,22 +1,17 @@
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         
+        # begin with carry_over at 1 because we are adding 1 to the original number
         carry_over = 1
         
         # traverse array from back to front        
         for num in reversed(range(len(digits))):
             
-            # Case: current digit is 9 --> set digit to 0 and set 1 for carry_over
+            # Case: current digit is 9 --> set digit to 0, carry_over remains 1
             if digits[num] == 9:
-                digits[num] = (digits[num] + carry_over) % 10
-                carry_over = 1
+                digits[num] = 0
                 
-            # # Case: current digit is 8 and carry_over is 1 --> set digit to 0 and set 1 for carry_over
-            # elif digits[num] == 8 and carry_over == 1:
-            #     digits[num] = 0
-            #     carry_over = 1
-                
-            # Otherwise: add (1+carry_over) to digit, end here because no more overflow
+            # Otherwise: just add carry_over to digit, end here because there is no more overflow
             else:
                 digits[num] += carry_over
                 return digits
