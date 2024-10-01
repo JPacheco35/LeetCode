@@ -13,5 +13,5 @@ class Solution:
                 digits[num] += 1
                 return digits
         
-        # if we reach here, need to add a new digit space (ie. 9 + 1 = 10)
+        # if we reach here, need to add a new digit space (ie. 99 + 1 = 100)
         return [1] + digits
