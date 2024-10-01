@@ -16,10 +16,5 @@ class Solution:
                 digits[num] += carry_over
                 return digits
         
-        # if loop ends and carry_over is not 0 --> we need to add a new digit space (ie. 9 + 1 = 10)
-        if carry_over == 1:
-            return [1] + digits
-            
-        
-        # we should never reach here
-        return digits
+        # if we reach here, need to add a new digit space (ie. 9 + 1 = 10)
+        return [1] + digits
