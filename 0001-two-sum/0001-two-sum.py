@@ -1,6 +1,7 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         
+        # get length of array
         length = len(nums)
         
         # loop thorugh each possible pairing --> o(n^2)
@@ -8,7 +9,7 @@ class Solution:
             for j in range(length):
                 
                 # can't add same num twice 
-                if i == j :
+                if i == j:
                     continue
                     
                 # if two num add to target, return indices
@@ -16,4 +17,4 @@ class Solution:
                     return [i,j]
                 
         # we should never reach here
-        return -1
+        return [-1,0]
