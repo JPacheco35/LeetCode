@@ -6,7 +6,7 @@ class Solution:
         
         # loop thorugh each possible pairing --> o(n^2)
         for i in range(length):
-            for j in range(length):
+            for j in range(i+1, length):
                 
                 # can't add same num twice 
                 if i == j:
